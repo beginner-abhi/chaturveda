@@ -1,0 +1,339 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<%--<html xmlns="http://www.w3.org/1999/xhtml">--%>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head runat="server">
+  
+    
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>चातुर्वेद-संस्कृतप्रचार-संस्थानम्</title>
+    
+    <link rel="icon" type="image/x-icon" href="public/fadb15ab-31eb-419f-abe8-3517c5ec5829.jfif">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <script src="public/assets/js/jquery-3.5.1.min.js"></script>
+	<!-- Google tag (gtag.js) -->
+	
+	
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ <div class="page">
+        <header class="rows" style="padding-bottom:0px;padding-top:5px;">
+            <div class="rows main_navs">
+                <div class="container flex justify-between hdr_container">
+                    <div class="logo_container">
+                        <a href="Index2.aspx" class="main_logo">
+ 
+                            <img src="sansathanam234_page-0001.jpg"  alt="चातुर्वेद-संस्कृतप्रचार-संस्थानम्"
+                                width="273" height="115" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="nav_container flex align-center">
+                      
+                        <nav class="flex justify-between">
+                            <div class="close flex align-center justify-end">
+                                <img src="public/assets/images/xmark-solid.svg" alt="Close" width="131" height="150">
+                            </div>
+                            <div class="menu_container flex flex-column">
+                                <ul class="menu_list flex flex-column" role="menu">
+                                    <li >
+                                        <a href="Index2.aspx" role="menuitem">गृह पृष्ठ </a></li>
+                                    <li >
+                                        <a href="About_us.aspx" role="menuitem">हमारे बारे में </a></li>
+                                    <li >
+                                        <a href="#" role="menuitem">सूचना</a></li>
+                                    <li >
+                                        <a href="form.aspx" role="menuitem">आवेदन</a></li>
+                                    <li >
+                                        <a href="gallery.aspx" role="menuitem">गैलरी</a></li>
+                                    <li >
+                                        <a href="Contact.aspx" role="menuitem">सम्पर्क </a></li>
+                                   
+                                    </ul>
+                                          </div>
+                <%--       <div style="text-align:right;">   
+                <asp:DropDownList>  
+                    <asp:ListItem Value="en-US" Text="English" />  
+                    
+                    <asp:ListItem Value="hi-IN" Text="हिंदी" />  
+                    <asp:ListItem Value="sa-IN" Text="संस्कृत" />  
+                </asp:DropDownList>  
+            </div> --%>
+
+
+                        </nav>
+                        <div class="hamburger_menu">
+                            <img src="public/assets/images/bars-solid.svg" alt="Menu" width="" loading="lazy">
+                        </div>
+                    </div>
+                  
+                    <div class="cover"></div>
+                </div>
+            </div>
+        </header>
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+     <footer>
+           
+            <div class="row2">
+                <div class="container">
+                    <div class="rows flex flex-wrap justify-between cont_main">
+                        <div class="donate_col" style="text-decoration-color:white";>
+                            <h4 class="widget-title line-bottom" >हमारे बारे में</h4>
+                            <p style="font-size:15px;text-align:justify;font-weight:normal;">
+संस्कृत भाषा एवं भारतीय ज्ञान परम्परा के प्रधानभूत बौद्धिक सम्पदा का प्रचार-प्रसार एवं विकास।<br> प्राच्यविद्या के संरक्षण एवं संवर्धन हेतु पाण्डुलिपि संग्रह, शोध, साहित्य लेखन, सम्पादन एवं प्रकाशन। <br>
+संस्कृत शिक्षाप्रधान, योग आयुर्वेद, अध्यात्म, पर्यावरण आदि के द्वारा स्वस्थ समाज और समृद्ध राष्ट्र के निर्माण में अपूर्व योगदान।
+                            </p>
+                        
+                        </div>
+                        <div class="nav_col flex">
+                            <div class="col">
+                             
+                          
+                            <h4 class="widget-title line-bottom">सम्पर्क</h4>
+                           <ul class="list angle-double-right list-border">
+                                <li><a href="">सी.4/353 सराय गोवर्धन, चेतगंज, वाराणसी <br>उ.प्र. 221001</a></li>
+                                <li><a href=""> Mobile: 8318867067,9831166190 </a></li>
+                                <li><a href="">E-mail: csps.kashi@gmail.com</a></li>
+                            </ul>
+                                               
+                            </div>
+                            <div class="col">
+                                </div>
+                                                    <div class="col">
+                                <h4>मेनू</h4>
+                                <ul>
+                                                                    <li>
+                                        <a href="Index2.aspx" role="menuitem">
+                                            गृह पृष्ठ                                       </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="About_us.aspx" role="menuitem">
+                                            हमारे बारे में                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="#" role="menuitem">
+                                            सूचना                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="#" role="menuitem">
+                                            आवेदन                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="#" role="menuitem">
+                                            गैलरी                                       </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="#" role="menuitem">
+                                            सम्पर्क                                       </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                          
+
+
+                        </div>
+                        <div class="info_col">
+                           
+                            <div class="social">
+
+
+                                <div class="icons flex">
+                                    <a href="" target="_blank" rel="noopener noreferrer">
+                                        <img src="public/assets/images/facebook-01.png" alt="Facebook" loading="lazy"
+                                            width="36" height="36">
+                                    </a>
+                                    <a href="" target="_blank" rel="noopener noreferrer">
+                                        <img src="public/assets/images/youtube-01.png" alt="Youtube" loading="lazy" width="36"
+                                            height="36">
+                                    </a>
+                                    <a href="" target="_blank" rel="noopener noreferrer">
+                                        <img src="public/assets/images/instagram-01.png" alt="Instagram" loading="lazy"
+                                            width="36" height="36">
+                                    </a>
+                                    <a href="" target="_blank" rel="noopener noreferrer">
+                                        <img src="public/assets/images/twitter-01.png" alt="Twitter" loading="lazy" width="36"
+                                            height="36">
+                                    </a>
+                                </div>
+                     
+                       </div>
+
+                            <br>
+                            <br>
+
+
+   <%-- <div>  
+    <p>No. of Online Users:<asp:Label ID="Label1" runat="server" Text="Label" ForeColor="#CC0000"></asp:Label></p>  
+    </div>--%> 
+                        </div>
+
+
+                    </div>
+                    <div class="rows copy_rights flex align-center ">
+                        <p>© 2024 चातुर्वेद-संस्कृतप्रचार-संस्थानम् <br>
+                           C4/353 SARAI GOVERDHAN CHETGANJ VARANASI. 221001
+                        </p>
+                        <ul class="flex align-center">
+                            <li><a href="#"  rel="noopener noreferrer">Privacy Policy</a></li>
+                            <li><a href="#"  rel="noopener noreferrer"> Terms of Use</a></li>
+                            <li><a href="#"  rel="noopener noreferrer">Disclaimer</a></li>
+                        </ul>
+                        <div class="col">
+                            <p style="margin-left:50px";>Visitors</p>
+                        <%--<div id="sfcmaj65f4ynay6anyf5ffs4u3aspjhzn39"></div>--%>
+                        <script type="text/javascript" src="https://counter8.optistats.ovh/private/counter.js?c=maj65f4ynay6anyf5ffs4u3aspjhzn39&down=async" async></script>
+                        
+                            <noscript><img src="" border="0" title="page counters" alt="page counters"></noscript>
+                            <a href="" title="page counters"><img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=maj65f4ynay6anyf5ffs4u3aspjhzn39" border="0" title="page counters" alt="page counters"></a>
+
+                    </div>
+                        </div>
+                </div>
+            </div>
+
+        </footer>
+           <div class="popup course_guide_popup" id="course_guide_popup">
+            <div class="cover"></div>
+            <div class="pop-con">
+                <div class="close">
+                </div>
+                <div class="con">
+                    <img src="public/assets/images/course-guide.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scrollToTop" id="scrollToTop"></div>
+    <script src="public/assets/js/jquery-3.5.1.min.js"></script>
+
+    <script src="../cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.js"></script>
+    <script src="public/assets/js/support.js"></script>
+    <script>
+        $("#subscribe_btn").on('click', function (e) {
+            sub_phone = $("#sub_phone").val();
+            sub_email = $("#sub_email").val();
+            $.ajax({
+                url: 'https://madrassanskritcollege.com/ajaxservice',
+                type: 'post',
+                dataType: 'json',
+                data: { 'action': 'newsletter_subscribe', 'sub_email': sub_email, 'sub_phone': sub_phone },
+                success: function (data) {
+                    if (data['is_error'] == "1") {
+                        //$("#msg_div").addClass("btn");
+                        $("#msg_div").html(data['msg']);
+                    }
+                    else {
+                        $("#frm_subcribe").css("display", "none");
+                        $("#msg_div").addClass("btn_sec");
+
+                        $("#msg_div").html("Thanks for subscribing");
+                    }
+                }
+            });
+        });
+
+
+        </script>
+  <%--  <script>
+    $(function () {
+  ///// Language Switching (2 languages: English and Chinese). /////
+
+  // Initially disable language switching button.
+  $('#switch-lang').css({'pointer-events':'none',
+   'cursor':'default'}).attr('disabled','disabled');
+
+  function langButtonListen() {
+    $('#switch-lang').click(function (event) {
+      event.preventDefault();
+      $('[lang="hi"]').toggle();
+      $('[lang="en"]').toggle();
+      $('[lang="sa"]').toggle();
+      // Switch cookie stored language.
+      if ($.cookie('lang') === 'en') {
+        $.cookie('lang', 'hi', { expires: 7 });
+      } else {
+        $.cookie('lang', 'en', { expires: 7 });
+      }
+    });
+    // Enable lang switching button.
+    $('#switch-lang').css({'pointer-events':'auto',
+     'cursor':'pointer'}).removeAttr('disabled');
+  }
+
+  // Check if language cookie already exists.
+  if ($.cookie('lang')) {
+    var lang = $.cookie('lang');
+    if (lang === 'en') {
+      $('[lang="zh"]').hide();
+      langButtonListen();
+    } else {
+      $('[lang="en"]').hide();
+      langButtonListen();
+    }
+  } else {
+    // no cookie set, so detect language based on location.
+    if ("geolocation" in navigator) {
+      // geolocation is available
+      navigator.geolocation.getCurrentPosition(function (position) {
+        // accepted geolocation so figure out which country
+        var lat = position.coords.latitude,
+            lng = position.coords.longitude;
+        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?latlng='+lat+','+lng+'&sensor=true', null, function (response) {
+          var country = response.results[response.results.length-1].formatted_address;
+          if (country ===  'Taiwan' || country === 'China') {
+            $('[lang="en"]').hide();
+            $.cookie('lang', 'zh', { expires: 7 });
+            langButtonListen();
+          } else {
+            $('[lang="zh"]').hide();
+            $.cookie('lang', 'en', { expires: 7 });
+            langButtonListen();
+          }
+        }).fail(function (err) {
+          console.log('error: '+err);
+          $('[lang="zh"]').hide();
+          $.cookie('lang', 'en', { expires: 7 });
+          langButtonListen();
+        });
+      },
+      function (error) {
+        if (error.code == error.PERMISSION_DENIED) {
+          // denied geolocation
+          $('[lang="zh"]').hide();
+          $.cookie('lang', 'en', { expires: 7 });
+          langButtonListen();
+        } else {
+          console.log('Unknown error. Defaulting to English!');
+          $('[lang="zh"]').hide();
+          $.cookie('lang', 'en', { expires: 7 });
+          langButtonListen();
+        }
+      });
+    } else {
+      // geolocation IS NOT available
+      $('[lang="zh"]').hide();
+      $.cookie('lang', 'en', { expires: 7 });
+      langButtonListen());
+    }
+  }
+});
+    </script>--%>
+
+</body>
+</html>

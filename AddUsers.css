@@ -1,0 +1,405 @@
+* {
+	margin: 0;		/*reset everything default margin*/
+	padding: 0;		/*reset everything removes padding*/
+}
+* {box-sizing: border-box}
+
+/*=====================CSS GRID=====================*/
+
+.tophdritem { grid-area: header1; }					/*other styles in central menu section*/
+
+.tophdrcontainer{
+	margin:auto;
+}
+
+.tophdrrow { 
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.item1 {  
+	/*background-image: url("msclogo.png"); 	/*this puts logo in header
+	background-repeat: no-repeat;			/*this stops multiple images
+	width: 350px;							/*for full display of logo
+	height: 130px;*/
+}
+
+.item1r {  
+	overflow: hidden;							/*removes the scrollbars while browser resizes*/
+	background-color: white;
+	border-style: solid solid solid solid;
+	border: 2px none #bbbbbb;
+	border-radius: 10px;							/*rounded edges*/
+	border-color: white;
+	padding: 20px 25px 20px 40px; 					/*top, right, bottom, left*/
+	width: auto;
+	overflow: auto;									/*displays the scrollbars while browser resizes*/
+	margin: 30px 2px auto auto;					/*top, right, bottom, left*/
+	height: 95px;
+	/*margin-top: 20px;								/*inc. brings menu lower
+	margin-bottom: 20px;*/						
+}
+
+.item2 { grid-area: header2; 
+	background-image: url("Header%20Purple%20Band.png");	/*this puts traditional purple in header*/
+	text-align: left;
+	padding: 45px 40px;				/*I inc brings down & II inc moves right*/
+	color: white;
+	cursor: default;
+}
+.item3 { grid-area: header3;
+	background-image: url("Header%20Brown%20Band.png");		/*this puts brown in header*/
+	text-align: left;
+	padding: 15px 40px;				/*I inc brings down & II inc moves right*/
+	font-size: 20px;
+	color: white;
+	cursor: default;
+}
+
+ul.bkbtn li {
+    list-style: none;			/*removes bullets*/
+}
+
+ul.bkbtn li a {
+	cursor: pointer;
+    list-style: none;			/*removes bullets*/
+}
+
+.item4 { grid-area: lhsmenu; }
+
+.item5 { grid-area: lessons; 
+	margin: auto;				/*centers the login box*/
+}
+
+.footer { grid-area: footer;
+	background-image: url("Footer%20Purple%20Band.png");	/*this puts purple band - other styles in footer section*/
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1'
+    'header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2'
+    'header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3'
+    'lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons'
+    'footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer';
+	/*grid-template-rows: 110px 120px 50px 3330px 380px;*/ /*for initial sizing only*/
+	background-color: white; 		/*pink used for testing*/
+	padding: 10px; 					/*lhs and rhs spaces for entire grid*/
+	/*grid-gap: 10px;*/ 			/*gap inbetween grid rows for testing*/
+	min-height: calc(100vh - 650px); /*stops the foooter from floating to top on resizing*/
+}
+
+.grid-container > div {
+  background-color: white;		/*cyan used for testing*/
+}
+
+/*=====================TOP MENU SECTION=====================*/
+
+.dropbtn4 {
+  background-color: white;
+  text-decoration: none; 				/*removes underlining from hyperlink*/
+  border-style: outset;
+  border: 2px none #bbbbbb;
+  border-radius: 20px;					/*rounded edges*/
+  color: purple;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.dropdown4 {
+  display: inline-block;
+}
+
+.dropdown4:hover .dropbtn4 {
+  background-color: purple;
+  color: white;
+}
+
+/*=====================LOGIN SECTION=====================*/
+form {
+	border: 3px solid #f1f1f1;
+}
+
+input[type=text] {
+  padding: 10px 10px;							/*II inc. makes box broader*/
+  margin: 15px 0;								/*I inc. makes box taller*/
+  display: inline-block;
+  border: 2px solid purple;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+
+#abatch {
+  padding: 8px 10px;							/*II inc. makes box broader*/
+  margin: 20px 0;								/*I inc. makes box taller*/
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: sans-serif;
+  background-color: #effbff;
+}
+
+#pwuid {
+  padding: 8px 10px;							/*II inc. makes box broader*/
+  margin: 20px 0;								/*I inc. makes box taller*/
+  display: inline-block;
+  border: 1px solid darkblue;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: sans-serif;
+  background-color: #effbff;
+  color: purple;
+}
+
+#course {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: cursive, sans-serif;
+  font-size: 85%;
+  text-align: center;
+  outline: 0;
+  background: white;
+  color: purple;
+  border: 2px solid purple;
+  padding: 8px;
+  border-radius: 9px;
+}
+
+#acourse {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #effbff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-family: cursive, sans-serif;
+  font-size: 85%;
+  text-align: center;
+  outline: 0;
+  color: grey;
+  padding: 8px;
+}
+
+button {
+  background-color: purple;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border: 2px solid #bbbbbb;
+  border-radius: 20px;					/*rounded edges*/
+  font-size: 115%;
+}
+
+button:hover {
+  /*opacity: 0.8;*/
+  background-color: #8a154f;
+}
+
+.containerlogin {
+  padding: 10px 30px;
+  width: 780px;
+}
+
+.annlogin {
+  padding: 10px 30px;
+  width: 700px;
+}
+
+.a1 {
+	width: 44.5em;  
+	background-color: #8a154f;   
+	color: white;
+    border: 2px solid white;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: center;
+	margin: auto;
+}
+
+.a2 {
+	width: 44.5em;  
+	background-color: white;   
+	color: #8a154f;
+    border: 2px solid #8a154f;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: center;
+	margin: auto;
+}
+
+.pcontainer {
+  padding: 10px;
+  word-wrap: break-word; 
+  width: 660px;;  
+}
+
+#title {
+  width: 95%;
+  padding: 12px 10px;							/*II inc. makes box broader*/
+  margin: 20px 0;								/*I inc. makes box taller*/
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: sans-serif;
+  background-color: #effbff;
+}
+
+#desc {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  padding: 10px;
+  background-color: #effbff;
+}
+
+
+/*table for course completion display*/
+#students {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#students td, #students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#students tr:nth-child(even){background-color: #f2f2f2;}
+
+#students tr:hover {background-color: #ddd;}
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #8a154f;
+  color: white;
+}
+
+
+/*table for admissions display*/
+#tabhdg {
+  margin: auto;
+  color: #8a154f;
+  text-align: center;
+}
+
+
+/*h2 purple coloured*/
+#msgh2 {
+  margin: auto;
+  color: puplr;
+  text-align: center;
+}
+
+
+/*=====================FOOTER SECTION=====================*/
+.container{
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-image: url("Footer%20Purple%20Band.png");	/*this puts purple band in footer section*/
+    padding: 30px 0;									/*top and bottom spaces of footer text*/
+}
+.footer-col{
+   width: 25%;
+   padding: 0 28px;										/*L and R spaces of footer text*/
+   word-wrap: break-word
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;										/*this is half-underlining*/
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li p{
+	font-size: 15px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	line-height: 2.3;
+}
+.footer-col ul li a{
+	font-size: 15px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+.btn {
+	display: block;
+	justify-content: center;
+	font-size: 20px;
+	font-style: normal;
+	color: yellow;
+	white-space:nowrap;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+	word-wrap: break-word;
+}
+}
+
+@media(max-width: 574px){
+  .footer-col{
+    width: 50%;						/*100% makes 1column display in cell phone; 50% makes 2columns*/
+	word-wrap: break-word;
+}
+}
+
+/*=====================RESIZING THE MENU=====================*/
+@media screen and (max-width: 500px) {
+  .item1r a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}

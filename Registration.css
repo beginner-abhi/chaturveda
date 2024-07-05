@@ -1,0 +1,511 @@
+* {
+	margin: 0;		/*reset everything default margin*/
+	padding: 0;		/*reset everything removes padding*/
+}
+* {box-sizing: border-box}
+
+/*=====================CSS GRID=====================*/
+
+.tophdritem { grid-area: header1; }					/*other styles in central menu section*/
+
+.tophdrcontainer{
+	margin:auto;
+}
+
+.tophdrrow { 
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.item1 {  
+	/*background-image: url("msclogo.png"); 	/*this puts logo in header
+	background-repeat: no-repeat;			/*this stops multiple images
+	width: 350px;							/*for full display of logo
+	height: 130px;*/
+}
+
+.item1r {  
+	/*overflow: hidden;*/							/*removes the scrollbars while browser resizes*/
+	background-color: white;
+	border-style: solid solid solid solid;
+	border: 2px none #bbbbbb;
+	border-radius: 10px;							/*rounded edges*/
+	border-color: white;
+	padding: 20px 25px 20px 40px; 					/*top, right, bottom, left*/
+	width: auto;
+	overflow: auto;									/*displays the scrollbars while browser resizes*/
+	margin: 30px 2px auto auto;					/*top, right, bottom, left*/
+	height: 95px;
+	/*margin-top: 20px;								/*inc. brings menu lower
+	margin-bottom: 20px;*/						
+}
+
+.item2 { grid-area: header2; 
+	background-image: url("Header%20Purple%20Band.png");	/*this puts traditional purple in header*/
+	text-align: left;
+	padding: 45px 40px;				/*I inc brings down & II inc moves right*/
+	font-size: 25px;
+	color: white;
+	cursor: default;
+}
+
+.item3 { grid-area: header3;
+	background-image: url("Header%20Brown%20Band.png");		/*this puts brown in header*/
+	text-align: center;
+	padding: 12px 30px;				/*I inc brings down & II inc moves right*/
+	font-size: 18px;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+div.item3 a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 8px 23px 8px 23px; 			/*top, right, bottom, left*/
+  text-decoration: none;
+  border-radius: 10px;					/*rounded edges*/
+}
+
+div.item3 a:hover {
+  background-color: #841e1e;
+}
+
+div.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+.centralitem { grid-area: lessons; }					/*other styles in central menu section*/
+
+.item5 {
+  width: 1300px;
+  margin: auto;				/*centers horizontally in browser*/
+}
+
+
+.footer { grid-area: footer;
+	background-image: url("Footer%20Purple%20Band.png");	/*this puts purple band - other styles in footer section*/
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1 header1'
+    'header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2 header2'
+    'header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3 header3'
+    'lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons lessons'
+    'footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer';
+	/*grid-template-rows: 110px 120px 50px 3330px 380px;*/ /*for initial sizing only*/
+	background-color: white; 		/*pink used for testing*/
+	padding: 10px; 					/*lhs and rhs spaces for entire grid*/
+	/*grid-gap: 10px;*/ 			/*gap inbetween grid rows for testing*/
+	min-height: calc(100vh - 650px); /*stops the foooter from floating to top on resizing*/
+}
+
+.grid-container > div {
+  background-color: white;		/*cyan used for testing*/
+}
+
+/*=====================TOP MENU SECTION=====================*/
+.dropbtn4 {
+  background-color: white;
+  text-decoration: none; 				/*removes underlining from hyperlink*/
+  border-style: outset;
+  border: 2px none #bbbbbb;
+  border-radius: 20px;					/*rounded edges*/
+  color: purple;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.dropdown4 {
+  display: inline-block;
+}
+
+.dropdown4:hover .dropbtn4 {
+  background-color: purple;
+  color: white;
+}
+
+.dropbtn4active {
+  background-color: purple;
+  text-decoration: none; 				/*removes underlining from hyperlink*/
+  border-style: outset;
+  border: 2px none #bbbbbb;
+  border-radius: 20px;					/*rounded edges*/
+  color: white;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.dropdown4active {
+  display: inline-block;
+}
+
+/*=====================REGISTRATION SECTION=====================*/
+#regn {
+  border: 3px solid #f1f1f1;                /*this is the form with id=regn*/
+  width: 680px;
+  margin: auto;                             /*centers the form*/
+}
+
+input[type=text] {
+  width: 570px;
+  padding: 12px 30px;							/*I inc. brings boxes closer. II inc. makes box broader*/
+  /* margin: 15px 0;		*/						/*I inc. makes box taller*/
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 50px;							/*II inc. makes box broader*/
+  /*margin: 20px 0;					*/			/*I inc. makes box taller*/
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: purple;
+  color: white;
+  padding: 14px 20px;
+  margin: 18px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border: 2px solid #bbbbbb;
+  border-radius: 20px;					/*rounded edges*/
+  font-size: 115%;
+}
+
+button:hover {
+  /*opacity: 0.8;*/
+  background-color: #8a154f;
+}
+
+.containerlogin {
+  padding: 50px;
+}
+
+.g-recaptcha {
+   margin-left: auto;
+}
+
+.a1 {
+	width: 44.5em;  
+	background-color: #8a154f;   
+	color: white;
+    border: 2px solid white;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: center;
+	margin: auto;
+}
+
+.a2 {
+	width: 44.5em;  
+	background-color: #4c044c;   
+	color: white;
+    border: 2px solid white;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: center;
+	margin: auto;
+}
+
+.a3 {
+	width: 44.5em;  
+	background-color: white;   
+	color: #4c044c;
+    border: 2px solid #4c044c;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: center;
+	margin: auto;
+}
+
+.a3red {
+	width: 44.5em;  
+	background-color: white;   
+	color: red;
+    border: 2px solid red;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: center;
+	margin: auto;
+}
+
+.a4 {
+	width: 55em;  
+	background-color: #4c044c;   
+	color: white;
+    border: 2px solid white;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: center;
+	margin: auto;
+}
+
+.a3l {
+	width: 55em;  
+	background-color: white;   
+	color: #4c044c;
+    border: 2px solid #4c044c;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: left;
+	margin: auto;
+}
+
+.a4tall {
+	width: 55em;
+	height: 50px;
+	background-color: #4c044c;   
+	color: white;
+    border: 2px solid white;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: center;
+	margin: auto;
+}
+
+.a5 {
+	width: 55em;  
+	background-color: white;   
+	color: #4c044c;
+    border: 2px solid #4c044c;      
+    padding: 10px;      
+    font-size: 125%;  
+	text-align: center;
+	margin: auto;
+}
+
+
+#dnum {
+  /*width: 20px;*/
+}
+
+#ver {
+  border: 3px none #f1f1f1;                /*this is the form with id=ver*/
+    margin-left: 550px;
+}
+
+#ver1 {
+  border: 3px none #f1f1f1;                /*this is the form with id=ver*/
+    margin-left: 500px;
+}
+
+#vnum {
+  width: 110px;
+}
+
+#vmailid {
+  width: 350px;
+}
+
+.readbtn {
+  background-color: purple;
+  color: white;
+  padding: 8px 8px;
+  margin: 15px 0;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #bbbbbb;
+  border-radius: 5px;					/*rounded edges*/
+  font-size: 90%;
+  text-decoration: none; 				/*removes underlining from hyperlink*/
+
+}
+
+.readbtn:hover {
+  background-color: #8a154f;
+}
+
+.div2 {
+  width: 200px;
+  height: 30px;  
+  padding: 10px 30px 30px 40px;
+  border: 1px solid blue;
+}
+
+.L-btn {
+  display: block;						/*resizes button w/o breaking it*/	
+  background-color: white;
+  padding: 15px 200px;					/*I no. inc. makes button tall & II no. inc. makes button broad*/
+  text-decoration: none;
+  border: 2px solid purple;
+  border-radius: 10px;					/*rounded edges*/
+  width: 55em;
+  margin: auto;                         /*centers*/    
+  cursor: default;
+}
+
+.L-btn1 {
+  display: block;						/*resizes button w/o breaking it*/	
+  background-color: white;
+  padding: 15px 200px;					/*I no. inc. makes button tall & II no. inc. makes button broad*/
+  text-decoration: none;
+  border: 2px solid purple;
+  border-radius: 10px;					/*rounded edges*/
+  width: 55em;
+  margin: auto;                         /*centers*/    
+  cursor: pointer;
+}
+
+.bname {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 120%;
+  color: purple;
+}
+
+.policy {
+  text-decoration: none;
+}
+
+.center {
+    text-align: center; /* Center horizontally */
+    display: flex;
+    justify-content: center; /* Center horizontally within the container */
+    align-items: center; /* Center vertically within the container */
+    /*height: 100vh; /* Center vertically on the viewport */
+}
+
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+       }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
+.blinktext {
+  text-decoration: none;
+  border-style: solid solid solid solid;
+  border: 2px solid purple;
+  padding: 5px;
+  display: block;
+  width: 190px;
+}
+
+
+
+
+/*=====================FOOTER SECTION=====================*/
+.container{
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-image: url("Footer%20Purple%20Band.png");	/*this puts purple band in footer section*/
+    padding: 30px 0;									/*top and bottom spaces of footer text*/
+}
+.footer-col{
+   width: 25%;
+   padding: 0 28px;										/*L and R spaces of footer text*/
+   word-wrap: break-word
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;										/*this is half-underlining*/
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li p{
+	font-size: 15px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	line-height: 2.3;
+}
+.footer-col ul li a{
+	font-size: 15px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+.btn {
+	display: block;
+	justify-content: center;
+	font-size: 20px;
+	font-style: normal;
+	color: yellow;
+	white-space:nowrap;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+	word-wrap: break-word;
+}
+}
+
+@media(max-width: 574px){
+  .footer-col{
+    width: 50%;						/*100% makes 1column display in cell phone; 50% makes 2columns*/
+	word-wrap: break-word;
+}
+}
+
+/*=====================RESIZING THE MENU=====================*/
+@media screen and (max-width: 500px) {
+  .item1r a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
