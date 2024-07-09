@@ -26,12 +26,19 @@
     </style>
 }
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
        <div class="gallery-item">
       <img src="Header%20Brown%20Band.png"  alt="Image 1">
     </div> 
       <div>
-          <asp:HiddenField ID="ID_det" runat="server" /> `
+          <asp:HiddenField ID="ID_det" runat="server" /> 
+
+   <%--       <asp:TextBox ID="txtEmailOrMobile" runat="server" placeholder="Enter Resistered Email"></asp:TextBox>
+           <a href="<%# "Download.aspx?id="+Eval("idDetails") %>">
+          <asp:Button ID="btnReprint" runat="server" Text="Reprint Registration" OnClick="btnReprint_Click" CssClass="btn btn-primary" />
+</a>--%>
+
     <asp:Table ID="tblUserRegistration" runat="server" BorderColor="Black" BorderWidth="1" BorderStyle="Solid" HorizontalAlign="Center" CssClass="table table-striped table-hover">
         <asp:TableHeaderRow >
             <asp:TableHeaderCell ColumnSpan="2" cssClass="lable" >
@@ -141,7 +148,7 @@
                 <hr />
                 
                   <a href="<%# "Download.aspx?id="+Eval("idDetails") %>">
-                <asp:Button ID="btnSignUp" class="js-download" runat="server" Text="भेजें" Textcolor="white" Font-Bold="true" BorderStyle="Groove" BackColor="Green" ValidationGroup="Submit" OnClick="btnSubmit_Click" cssClass="button"/>&nbsp;&nbsp;
+                <asp:Button ID="btnSignUp" class="js-download" runat="server" Text="भेजें" Textcolor="white" Font-Bold="true" BorderStyle="Groove" BackColor="Green" ValidationGroup="Submit" OnClick="btnSubmit_Click" cssClass="button" />&nbsp;&nbsp;
 </a>
                 <asp:Button ID="btnReset" runat="server" Text="रीसेट" Textcolor="white" Font-Bold="true"  BorderStyle="Groove" BackColor="Green" OnClick="btnReset_Click" cssClass="button"/>
             </asp:TableCell>
@@ -153,6 +160,7 @@
         </asp:TableRow>
     </asp:Table>
     </div>
+  
 <br>
 </asp:Content>
 
